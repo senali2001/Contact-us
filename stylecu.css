@@ -1,30 +1,173 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'fertigo pro';
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
+
+@font-face {
+    font-family: 'Fertigo Pro';
+    src: url(FertigoPro);
+}
+/*navybar style*/
+.navbar {
+
+    height: 80px;
+    margin: 20px;
+    padding: 0.5rem;
+    background-color: #1dacd6;
+    border-radius: 20px;
+
 }
 
+.navbar-brand {
+    font-weight: 800;
+    color: #0e6889;
+    font-size: 24px;
+    transition: 0.3s color;
+    font-family: "Merienda", cursive;
+}
 
-body {
+.login-button {
+    background-color: #0e6889;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    font-family: 'Fertigo Pro';
+}
+
+.login-button:hover {
+    background-color: #1cc4e1;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #191970;
+    font-weight: 420;
+    position: relative;
+    font-family: 'Fertigo Pro';
+    font-size: 18px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #0e6889;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+/*end navybar style*/
+
+/* BackgroundImage section */
+.image-section {
+    background: url('hero2.jpg') no-repeat center;
     background-size: cover;
-    background-image: url('b.jpg');
+    width: 100%;
+    height: 100vh;
+}
+
+.image-section::before {
+    background-color: rgba(0, 0, 0, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.image-section .container {
+    height: 75vh;
+    position: relative;
+
+}
+
+.image-section h1 {
+    font-size: 2.9rem;
+    color: #4682b4;
+    font-family: "Merienda", cursive;
+    font-weight: 900;
+}
+
+.image-section h3 {
+    font-size: 2.5rem;
+    color: #4682b4;
+    font-family: "Merienda", cursive;
+    font-weight: 400;
+}
+/*end BackgroundImage section */
+header {
+    padding-top: 100px;
+    text-align: center;
+    color: black;
+
+}
+
+.caption {
+
+    color: black;
+    justify-content: center;
+    padding: 40px;
+    padding-top: 10px;
+    font-weight: 400;
+}
+
+.row {
+    margin: 0;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+
 }
 
 #col1 {
+    
     display: flex;
     flex-direction: column;
 }
 
-form {
+
+
+.contact {
     margin-right: 20px;
     margin-left: 20px;
-    width: 450px;
-    height: 400px;
+    width:90%;/*edit 450 to 90%*/
+    max-width: 450px;  /*edit*/
+    height: auto;/*edit 400 to auto*/
     align-self: center;
-    background-color: beige;
+    background-color:rgb(148, 198, 239) ;
     border-radius: 4%;
     padding: 40px;
+    
 }
 
 .text {
@@ -32,21 +175,14 @@ form {
 
 }
 
-.caption {
-    color: black;
-    justify-content: center;
-    padding: 40px;
-    padding-top: 100px;
-    font-weight: 1000;
 
-}
 
 .btn1 {
     color: white;
     background-color: rgb(28, 122, 172);
     width: 100px;
     border-radius: 6px;
-    height: 30;
+    height: 30px;
     cursor: pointer;
     border: none;
 }
@@ -76,18 +212,83 @@ textarea {
     margin-left: 200px;
 
 }
-@media (max-width: 600px) {
-    form {
-        width: 90%;
-        padding: 20px;
-    }
+@media (max-width: 576px){
+    .row{
+        margin: auto;
+        flex-direction: column; /* newly add*/
+        align-items: center; /* newly add*/
 
-    .box {
-        margin-left: 0;
-        text-align: center;
+        
     }
-
-    .caption {
-        padding: 20px;
+    .contact{
+       width: 90%;
+       padding: 20px;
+       margin: 10px;
     }
 }
+
+
+/*footer style*/
+.footer {
+    background-color: #0e6889;
+}
+
+.footer h5 {
+    color: #fff;
+    font-family: "Merienda", cursive;
+}
+
+.footer h3 {
+    color: #1cc4e1;
+    font-family: "Merienda", cursive;
+}
+
+.footer p {
+    font-family: 'Fertigo Pro';
+}
+
+.footer .ubox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 10px;
+
+
+}
+
+.footer .ubox p {
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    color: #a9a9a9;
+    text-transform: capitalize;
+
+}
+
+.footer .ubox input {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 5px 5px;
+    width: 240px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    height: 35px;
+    background-color: white;
+}
+
+.footer .ubox button {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 5px 5px;
+    outline: #4682b4;
+    text-transform: lowercase;
+    height: 37px;
+
+}
+
+.ubox button:hover {
+    background-color: #1cc4e1;
+}
+
+/*end footer style*/
+
