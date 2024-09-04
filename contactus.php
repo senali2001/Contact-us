@@ -1,12 +1,13 @@
 <?php
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>DreamScape</title>
     <link rel="stylesheet" href="stylecu.css">
     <!--bootstrap links-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -20,69 +21,83 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-
 <body>
+    <div class="background">  
+        <!--Navbar-->
+    <?php include"nav.php";?>
+     <!-- End of Navbar-->
 
-    <!--Caption for Contact Us-->
-    <div class="caption">
-        <h1>
+         <!--BackgroundImage Section-->
+    <section class="image-section">
+        <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
+            <h1>Come With Us to</h1>
+            <h3>Refresh Your Mind</h3>
+        </div>
+        
+    </section>
+    <!--End of BackgroundImage Section-->
+         <!--Caption for Contact Us-->
+        <header> 
+            <h1>
             <center>Contact Us</center>
-        </h1><br>
-        <p>
-            <center>
-                <font size="4">
+            </h1>
+        </header>
+        <div class="caption">
+            <p>
+                <center>
+                        <font size="4">
                     Have questions about your next adventure? Our team is here to help! Reach out to us for personalized
                     travel advice, booking assistance, or any other inquiries. We're excited to help you create
-                    unforgettable memories.</font>
-            </center>
-        </p>
-    </div>
+                    unforgettable memories.
+                        </font>
+                </center>
+            </p>
+        </div>
     <!--End of Caption for Contact Us-->
 
-    <!--First column -->
-    <div class="row">
-        <div class="col-sm-6" id="col1">
-
-            <div class="box">
-                <div><img src="geo-alt.svg"></div>
+         <!--First column -->
+<section class="row">
+     <div class="col-sm-6" id="col1">
+        <div class="box">
+            <div><img src="geo-alt.svg" alt="location" ></div>
                 <div class="text">
                     <h3>Address</h3>
                     <p>No.223,<br>Havelock road,<br>Colombo 07</p>
                 </div>
-            </div>
-            <div class="box">
-                <div><img src="telephone.svg"></div>
-                <div class="text">
-                    <h3>Phone</h3>
-                    <p>+94 11 222 23 23</p>
                 </div>
-            </div>
+        <div class="box">
+                <div><img src="telephone.svg" alt="Phone"></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+94 11 222 23 23</p>
+                    </div>
+        </div>
 
-            <div class="box">
-                <div><img src="envelope.svg"></div>
+        <div class="box">
+                <div><img src="envelope.svg" alt="Email"></div>
                 <div class="text">
                     <h3>Email</h3>
                     <p>support@gmail.com</p>
                 </div>
-            </div>
         </div>
+    </div>
 
 
-        <!--form enter full name, email, your msg-->
-        <div class="col-sm-6">
-            <form action="connect.php" method="POST" class="contact">
+        <!--form enter full name, email, your massage-->
+        <div class="col-sm-6" id="col2">
+           <form action="contactusdb.php" method="POST" class="contact">
                 <h2>
                     <center>Send Massage</center>
                 </h2><br>
 
 
                 <label for="name">Full Name<br>
-                    <input type="text" name="full_name" required="required" placeholder="Enter Your Full name"
-                        id="name">
+                    <input type="text" name="full_name" placeholder="Enter Your Full name"
+                        id="full_name" required>
 
                 </label><br>
 
@@ -91,7 +106,7 @@
 
                 </label>
                 <br>
-                <label for="message">Your Massage:<br>
+                <label for="massage">Your Massage:<br>
                     <textarea rows="2" name="massage" placeholder="Enter Your Massage Here" id="massage"
                         required></textarea>
 
@@ -99,13 +114,23 @@
                 <br><br>
                 <button type="submit" class="btn1" name="submit">Send</button>
                 <button type="reset" class="btn1" name="clear">Clear</button>
-
-
-
             </form>
-        </div>
-
+          </div>
+</section>
     </div>
-   </body> 
+<br><br>
 
+    <!--Footer-->
+    <?php include"footer.php";?> 
+    <!--End of Footer-->
+    
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+U3q0LL5k9I3y8fx38m7eElxF5vb4"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>
+
